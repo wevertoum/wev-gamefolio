@@ -1,17 +1,50 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import "./HomePage.less";
 
 import ReactTypingEffect from "react-typing-effect";
-import { Modal } from "antd";
+import { Form, message, Modal } from "antd";
+import SocialBits from "components/SocialBits";
+import FormContact from "components/FormContact";
+import { usePostMessage } from "hooks/networking/postMessage";
+import FadeLoading from "components/FadeLoading";
 
 interface Props {}
 const HomePage: React.FC<Props> = () => {
+  const postMessage = usePostMessage();
   const [modal, setModal] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [form] = Form.useForm();
+
+  const onFinish = useCallback(
+    async (values: Models.Message) => {
+      try {
+        setLoading(true);
+        await postMessage(values);
+        form.resetFields();
+        Modal.success({
+          content: "Mensagem enviada com sucesso!",
+          onOk: () => setModal(false),
+          centered: true,
+          okButtonProps: {
+            type: "dashed",
+          },
+        });
+      } catch (err) {
+        message.error("Erro ao enviar mensagem :/");
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    },
+    [form, postMessage]
+  );
+
   return (
     <>
+      <FadeLoading loading={loading} />
       <div className="main-content">
         <div className="awesome-intro" onClick={() => setModal(true)}>
-          <h1>PLAY IT!</h1>
+          <h1>{!modal ? "PLAY IT!" : "🤔"}</h1>
         </div>
         <div className="main-about">
           <h1>
@@ -45,20 +78,24 @@ const HomePage: React.FC<Props> = () => {
             />
           </h3>
         </div>
+        <div className="about-socials">
+          <SocialBits />
+        </div>
         <div className="main-graph">
           <div className="graph"></div>
         </div>
       </div>
       <Modal
         centered
-        okText="ok"
+        okText="Enviar"
         cancelText="cancelar"
         visible={modal}
         onCancel={() => setModal(false)}
-        onOk={() => setModal(false)}
+        onOk={() => form.submit()}
         closable
+        title="Me envie uma mensagem!"
       >
-        logo logo eu termino ok, vai com calma
+        <FormContact form={form} onFinish={onFinish} />
       </Modal>
     </>
   );

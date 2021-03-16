@@ -6,7 +6,6 @@ namespace Models {
     assunto: string;
     email: string;
     telefone: string;
-    destinatario: string;
     mensagem: string;
   }
 }
