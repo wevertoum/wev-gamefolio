@@ -1,0 +1,41 @@
+@import "~styles/variables.less";
+
+.main-things {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .test-color {
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+  }
+  :nth-child(1) {
+    background-color: @primary-color;
+  }
+  :nth-child(2) {
+    background-color: @secondary-color;
+  }
+  :nth-child(3) {
+    background-color: @primary-color-shade;
+  }
+  :nth-child(4) {
+    background-color: @success-color;
+  }
+  :nth-child(5) {
+    background-color: @info-color;
+  }
+  :nth-child(6) {
+    background-color: @default-color;
+  }
+  :nth-child(7) {
+    background-color: @warning-color;
+  }
+  :nth-child(8) {
+    background-color: @danger-color;
+  }
+  :nth-child(9) {
+    background-color: @text-color-light;
+  }
+}
