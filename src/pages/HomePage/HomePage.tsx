@@ -93,7 +93,7 @@ const HomePage: React.FC<Props> = () => {
         onCancel={() => setModal(false)}
         onOk={() => form.submit()}
         closable
-        title="Me envie uma mensagem!"
+        title="Send me a message!"
       >
         <FormContact form={form} onFinish={onFinish} />
       </Modal>
