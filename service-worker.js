@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/wev-gamefolio/precache-manifest.00d19e3192bbee26a0217869a10da65d.js"
+  "/wev-gamefolio/precache-manifest.2652271be02b6b5fd8dc096d87a21ccd.js"
 );
 
 self.addEventListener('message', (event) => {

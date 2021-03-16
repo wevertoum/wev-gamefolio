@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c5629f2805ce9fc350b6eced7f5908ce",
+    "revision": "cda10bca463e02ed8febec41944b10f7",
     "url": "/wev-gamefolio/index.html"
   },
   {
-    "revision": "f7260706694b70393e2d",
-    "url": "/wev-gamefolio/static/css/2.a0754df1.chunk.css"
+    "revision": "00148b3187ee510f2ac8",
+    "url": "/wev-gamefolio/static/css/2.e458a1e3.chunk.css"
   },
   {
-    "revision": "7d16981d54b88c9ff70a",
-    "url": "/wev-gamefolio/static/css/main.738ad670.chunk.css"
+    "revision": "e08a19fa4cd314c05c06",
+    "url": "/wev-gamefolio/static/css/main.dd7bf384.chunk.css"
   },
   {
-    "revision": "f7260706694b70393e2d",
+    "revision": "00148b3187ee510f2ac8",
     "url": "/wev-gamefolio/static/js/2.3bc2c7d0.chunk.js"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wev-gamefolio/static/js/2.3bc2c7d0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7d16981d54b88c9ff70a",
+    "revision": "e08a19fa4cd314c05c06",
     "url": "/wev-gamefolio/static/js/main.921acb5c.chunk.js"
   },
   {
