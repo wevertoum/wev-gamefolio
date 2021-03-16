@@ -18,33 +18,33 @@ const FormContact: React.FC<Props> = ({ form, onFinish }) => {
       onFinish={onFinish}
       scrollToFirstError
     >
-      <Form.Item name="assunto" label="Assunto">
-        <Input placeholder="Assunto do seu contato" />
+      <Form.Item name="name" label="First and Last Name">
+        <Input placeholder="Insert your subject" />
       </Form.Item>
 
       <Form.Item
         name="email"
-        label="E-mail"
+        label="Email Address"
         rules={[
           {
             pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
-            message: "Este e-mail não é válido!",
+            message: "Invalid email!",
           },
         ]}
       >
-        <Input placeholder="informe aqui seu email" />
+        <Input placeholder="Your best email" />
       </Form.Item>
 
-      <Form.Item name="telefone" label="Telefone">
+      <Form.Item name="contact_number" label="Contact Number">
         <MaskedInput placeholder="(99)99999-9999" mask="(11)11111-1111" />
       </Form.Item>
 
       <Form.Item
-        name="mensagem"
-        label="Mensagem"
-        rules={[{ required: true, message: "Por favor insira a mensagem!" }]}
+        name="message"
+        label="Message"
+        rules={[{ required: true, message: "Pls, type a message!" }]}
       >
-        <Input.TextArea placeholder="Em que posso te ajudar?" />
+        <Input.TextArea placeholder="how can i help you" />
       </Form.Item>
     </Form>
   );
