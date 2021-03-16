@@ -12,12 +12,12 @@ const MainRouter: React.FC = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/home">
+        <Route exact path="/">
           <HomePage />
         </Route>
 
-        <Route exact path="/*">
-          <Redirect to="/home" />
+        <Route path="/">
+          <Redirect to="/" />
         </Route>
         <Route component={NotFoundPage} />
       </Switch>
