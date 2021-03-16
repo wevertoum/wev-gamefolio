@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/wev-gamefolio/static/css/main.dd7bf384.chunk.css",
+    "main.js": "/wev-gamefolio/static/js/main.921acb5c.chunk.js",
+    "main.js.map": "/wev-gamefolio/static/js/main.921acb5c.chunk.js.map",
+    "runtime-main.js": "/wev-gamefolio/static/js/runtime-main.79dbc71f.js",
+    "runtime-main.js.map": "/wev-gamefolio/static/js/runtime-main.79dbc71f.js.map",
+    "static/css/2.e458a1e3.chunk.css": "/wev-gamefolio/static/css/2.e458a1e3.chunk.css",
+    "static/js/2.3bc2c7d0.chunk.js": "/wev-gamefolio/static/js/2.3bc2c7d0.chunk.js",
+    "static/js/2.3bc2c7d0.chunk.js.map": "/wev-gamefolio/static/js/2.3bc2c7d0.chunk.js.map",
+    "color.less": "/wev-gamefolio/color.less",
+    "index.html": "/wev-gamefolio/index.html",
+    "precache-manifest.2652271be02b6b5fd8dc096d87a21ccd.js": "/wev-gamefolio/precache-manifest.2652271be02b6b5fd8dc096d87a21ccd.js",
+    "service-worker.js": "/wev-gamefolio/service-worker.js",
+    "static/css/2.e458a1e3.chunk.css.map": "/wev-gamefolio/static/css/2.e458a1e3.chunk.css.map",
+    "static/css/main.dd7bf384.chunk.css.map": "/wev-gamefolio/static/css/main.dd7bf384.chunk.css.map",
+    "static/js/2.3bc2c7d0.chunk.js.LICENSE.txt": "/wev-gamefolio/static/js/2.3bc2c7d0.chunk.js.LICENSE.txt",
+    "static/media/index.less": "/wev-gamefolio/static/media/PressStart2P-Regular.babe3bc9.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.79dbc71f.js",
+    "static/css/2.e458a1e3.chunk.css",
+    "static/js/2.3bc2c7d0.chunk.js",
+    "static/css/main.dd7bf384.chunk.css",
+    "static/js/main.921acb5c.chunk.js"
+  ]
+}
