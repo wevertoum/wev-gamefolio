@@ -16,7 +16,7 @@ const MainRouter: React.FC = () => {
           <HomePage />
         </Route>
 
-        <Route exact path="/">
+        <Route exact path="/*">
           <Redirect to="/home" />
         </Route>
         <Route component={NotFoundPage} />
