@@ -1,25 +1,27 @@
 {
   "files": {
-    "main.js": "/static/js/main.e4891660.chunk.js",
-    "main.js.map": "/static/js/main.e4891660.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.2944c1ba.js",
-    "runtime-main.js.map": "/static/js/runtime-main.2944c1ba.js.map",
-    "static/js/2.48762cf8.chunk.js": "/static/js/2.48762cf8.chunk.js",
-    "static/js/2.48762cf8.chunk.js.map": "/static/js/2.48762cf8.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.2f56acd4b097c370110e9b74c9448118.js": "/precache-manifest.2f56acd4b097c370110e9b74c9448118.js",
-    "service-worker.js": "/service-worker.js",
-    "static/js/2.48762cf8.chunk.js.LICENSE.txt": "/static/js/2.48762cf8.chunk.js.LICENSE.txt",
-    "static/media/FadeLoading.less": "/static/media/FadeLoading.2b4e5fb6.less",
-    "static/media/FormContact.less": "/static/media/FormContact.2e9335d2.less",
-    "static/media/HomePage.less": "/static/media/HomePage.8121b42b.less",
-    "static/media/NotFoundPage.less": "/static/media/NotFoundPage.27fd333e.less",
-    "static/media/SocialBits.less": "/static/media/SocialBits.2e9335d2.less",
-    "static/media/index.less": "/static/media/index.0f80ef77.less"
+    "main.css": "/wev-gamefolio/static/css/main.dc6313d6.chunk.css",
+    "main.js": "/wev-gamefolio/static/js/main.921acb5c.chunk.js",
+    "main.js.map": "/wev-gamefolio/static/js/main.921acb5c.chunk.js.map",
+    "runtime-main.js": "/wev-gamefolio/static/js/runtime-main.79dbc71f.js",
+    "runtime-main.js.map": "/wev-gamefolio/static/js/runtime-main.79dbc71f.js.map",
+    "static/css/2.e458a1e3.chunk.css": "/wev-gamefolio/static/css/2.e458a1e3.chunk.css",
+    "static/js/2.3bc2c7d0.chunk.js": "/wev-gamefolio/static/js/2.3bc2c7d0.chunk.js",
+    "static/js/2.3bc2c7d0.chunk.js.map": "/wev-gamefolio/static/js/2.3bc2c7d0.chunk.js.map",
+    "color.less": "/wev-gamefolio/color.less",
+    "index.html": "/wev-gamefolio/index.html",
+    "precache-manifest.5691c464366155707298f44d28f07439.js": "/wev-gamefolio/precache-manifest.5691c464366155707298f44d28f07439.js",
+    "service-worker.js": "/wev-gamefolio/service-worker.js",
+    "static/css/2.e458a1e3.chunk.css.map": "/wev-gamefolio/static/css/2.e458a1e3.chunk.css.map",
+    "static/css/main.dc6313d6.chunk.css.map": "/wev-gamefolio/static/css/main.dc6313d6.chunk.css.map",
+    "static/js/2.3bc2c7d0.chunk.js.LICENSE.txt": "/wev-gamefolio/static/js/2.3bc2c7d0.chunk.js.LICENSE.txt",
+    "static/media/index.less": "/wev-gamefolio/static/media/PressStart2P-Regular.babe3bc9.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.2944c1ba.js",
-    "static/js/2.48762cf8.chunk.js",
-    "static/js/main.e4891660.chunk.js"
+    "static/js/runtime-main.79dbc71f.js",
+    "static/css/2.e458a1e3.chunk.css",
+    "static/js/2.3bc2c7d0.chunk.js",
+    "static/css/main.dc6313d6.chunk.css",
+    "static/js/main.921acb5c.chunk.js"
   ]
 }
