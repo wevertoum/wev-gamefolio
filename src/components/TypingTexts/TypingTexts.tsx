@@ -30,7 +30,8 @@ const TypingTexts: React.FC<Props> = () => {
             "React JS",
             "Rest API",
             "React Native",
-            "Typescript",
+            "Software architecture",
+            "Typescript/Javascript",
             "UX / UI design",
             "NoSQL Databases",
           ]}
