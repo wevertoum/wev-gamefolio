@@ -20,7 +20,7 @@ const SocialBits: React.FC<Props> = () => {
         rel="noopener noreferrer"
         target="_blank"
       >
-        <GithubIcon size={40} />
+        <GithubIcon size={40} fill="#fff" />
       </a>
       <a
         title="Instagram"
@@ -28,7 +28,7 @@ const SocialBits: React.FC<Props> = () => {
         rel="noopener noreferrer"
         target="_blank"
       >
-        <InstagramIcon size={40} />
+        <InstagramIcon size={40} fill="#fff" />
       </a>
       <a
         title="Facebook"
@@ -36,7 +36,7 @@ const SocialBits: React.FC<Props> = () => {
         rel="noopener noreferrer"
         target="_blank"
       >
-        <FacebookIcon size={40} />
+        <FacebookIcon size={40} fill="#fff" />
       </a>
       <a
         title="Spotify"
@@ -44,7 +44,7 @@ const SocialBits: React.FC<Props> = () => {
         rel="noopener noreferrer"
         target="_blank"
       >
-        <SpotifyIcon size={40} />
+        <SpotifyIcon size={40} fill="#fff" />
       </a>
       <a
         title="Linkedin"
@@ -52,7 +52,7 @@ const SocialBits: React.FC<Props> = () => {
         rel="noopener noreferrer"
         target="_blank"
       >
-        <LinkedinIcon size={40} />
+        <LinkedinIcon size={40} fill="#fff" />
       </a>
       <a
         title="Twitter"
@@ -60,7 +60,7 @@ const SocialBits: React.FC<Props> = () => {
         rel="noopener noreferrer"
         target="_blank"
       >
-        <TwitterIcon size={40} />
+        <TwitterIcon size={40} fill="#fff" />
       </a>
     </div>
   );

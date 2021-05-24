@@ -20,43 +20,58 @@
     #0000ff
   );
 
-  .awesome-intro {
-    font-size: 45px;
-    margin-top: 15px;
-    text-shadow: 10px 10px @primary-color;
-    :hover {
-      margin-left: 5px;
-      text-shadow: 5px 5px @secondary-color;
-      cursor: pointer;
+  .body-content {
+    z-index: 1;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .awesome-intro {
+      font-size: 45px;
+      text-shadow: 10px 10px @primary-color;
+      :hover {
+        margin-left: 5px;
+        text-shadow: 5px 5px @secondary-color;
+        cursor: pointer;
+      }
+
+      @media screen and (max-width: 800px) {
+        font-size: 40px;
+      }
+      @media screen and (max-width: 640px) {
+        font-size: 35px;
+        text-shadow: 5px 5px @primary-color;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 30px;
+      }
+      @media screen and (max-width: 500px) {
+        font-size: 25px;
+      }
+      @media screen and (max-width: 380px) {
+        font-size: 20px;
+      }
+      @media screen and (max-width: 310px) {
+        font-size: 15px;
+      }
     }
 
-    @media screen and (max-width: 800px) {
-      font-size: 40px;
+    .about-socials {
+      margin-top: 50px;
     }
-    @media screen and (max-width: 640px) {
-      font-size: 35px;
-      text-shadow: 5px 5px @primary-color;
-    }
-    @media screen and (max-width: 600px) {
-      font-size: 30px;
-    }
-    @media screen and (max-width: 500px) {
-      font-size: 25px;
-    }
-    @media screen and (max-width: 380px) {
-      font-size: 20px;
-    }
-    @media screen and (max-width: 310px) {
-      font-size: 15px;
+    .button-control {
+      display: flex;
+      justify-content: center;
     }
   }
 
-  .about-socials {
-    margin-top: 50px;
-  }
   .main-graph {
+    position: absolute;
     overflow: hidden;
     width: 100%;
+    bottom: 0;
 
     .graph {
       width: 100%;
@@ -97,10 +112,5 @@
         }
       }
     }
-  }
-
-  .music-content {
-    position: absolute;
-    
   }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-function AvatarCards({ size = 50 }) {
+function AvatarCards({ size = 50, fill = "#030404" }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

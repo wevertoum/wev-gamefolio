@@ -6,10 +6,16 @@
   justify-content: space-between;
 
   & > a {
+    background-color: var(--primary-color);
+    border-radius: 20px;
     justify-content: center;
     align-items: center;
     display: flex;
     margin: 0px 4px;
+    &:hover {
+      background-color: var(--danger-color);
+      transition: all 0.3s ease-in-out;
+    }
     & > svg {
       transition: all 0.3s ease-in-out;
       &:hover {

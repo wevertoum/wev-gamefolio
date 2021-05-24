@@ -27,28 +27,36 @@ const HomePage: React.FC<Props> = () => {
   return (
     <>
       <div className="main-content">
-        <div className="awesome-intro" onClick={() => setModal(true)}>
-          <h1>{!modal ? "PLAY IT!" : "🤔"}</h1>
+        <div className="body-content">
+          <div className="awesome-intro" onClick={() => setModal(true)}>
+            <h1>{!modal ? "PLAY IT!" : "🤔"}</h1>
+          </div>
+          <TypingTexts />
+          <div className="about-socials">
+            <SocialBits />
+          </div>
+          <div className="button-control">
+            <Button
+              size="middle"
+              onClick={() => {
+                if (!playing) {
+                  audio.play();
+                } else {
+                  audio.pause();
+                }
+              }}
+              icon={playing ? <PauseCircleOutlined /> : <PlayCircleOutlined />}
+            >
+              {playing ? "pause vibes" : "play vibes"}
+            </Button>
+          </div>
         </div>
-        <TypingTexts />
-        <div className="about-socials">
-          <SocialBits />
-        </div>
+
         <div className="main-graph">
           <div className={`graph ${playing ? "animation" : ""}`} />
         </div>
       </div>
       <ModalContact onClose={(value) => setModal(value)} modal={modal} />
-      <Button
-        disabled={playing}
-        onClick={() => audio.play()}
-        icon={<PlayCircleOutlined />}
-      />
-      <Button
-        disabled={!playing}
-        onClick={() => audio.pause()}
-        icon={<PauseCircleOutlined />}
-      />
     </>
   );
 };
