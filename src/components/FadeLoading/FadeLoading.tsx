@@ -7,7 +7,7 @@ interface Props {
   message?: string;
   dark?: boolean;
 }
-export default function ({ loading, message, dark }: Props) {
+const FadeLoading = function ({ loading, message, dark }: Props) {
   if (loading) {
     return (
       <section className={`fade-loading ${dark ? "dark" : ""}`}>
@@ -16,4 +16,6 @@ export default function ({ loading, message, dark }: Props) {
       </section>
     );
   } else return <></>;
-}
+};
+
+export default FadeLoading;
