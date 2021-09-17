@@ -18,7 +18,7 @@ const TypingTexts: React.FC<Props> = () => {
         <span role="img" aria-label="sheep">
           💻
         </span>{" "}
-        I'm a front-end developer with knowledge in
+        I'm a developer with knowledge in
       </h3>
       <h3>
         <ReactTypingEffect
@@ -27,13 +27,13 @@ const TypingTexts: React.FC<Props> = () => {
           speed={300}
           typingDelay={500}
           text={[
+            "Next JS",
             "React JS",
             "Rest API",
             "React Native",
-            "Software architecture",
-            "Typescript/Javascript",
+            "Architecture",
+            "Typescript",
             "UX / UI design",
-            "NoSQL Databases",
           ]}
         />
       </h3>
