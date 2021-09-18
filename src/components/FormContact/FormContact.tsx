@@ -4,6 +4,7 @@ import "./FormContact.less";
 import { Form, Input } from "antd";
 import { FormInstance } from "antd/lib/form";
 import { MaskedInput } from "antd-mask-input";
+import emailPattern from "../../utils/emailPattern";
 
 interface Props {
   form: FormInstance;
@@ -27,7 +28,7 @@ const FormContact: React.FC<Props> = ({ form, onFinish }) => {
         label="Email Address"
         rules={[
           {
-            pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+            pattern: emailPattern,
             message: "Invalid email!",
           },
         ]}
