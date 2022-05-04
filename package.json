@@ -9,7 +9,7 @@
     "lint": "next lint",
     "test": "jest",
     "predeploy": "yarn build",
-    "deploy": "yarn build && gh-pages -d build"
+    "deploy": "yarn build && gh-pages -d out"
   },
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
