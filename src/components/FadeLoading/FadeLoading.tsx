@@ -1,5 +1,5 @@
 import React from "react";
-import "./FadeLoading.less";
+require("./FadeLoading.less");
 
 import { LoadingOutlined } from "@ant-design/icons";
 interface Props {

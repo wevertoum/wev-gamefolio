@@ -1,10 +1,10 @@
 import React, { useCallback, useState } from "react";
-import "./ModalContact.less";
+require("./ModalContact.less");
 
 import { Form, message, Modal } from "antd";
-import { usePostMessage } from "../../hooks/networking/postMessage";
 import FormContact from "../FormContact";
 import FadeLoading from "components/FadeLoading";
+import { usePostMessage } from "hooks/network/postMessage";
 
 interface Props {
   modal: boolean;
