@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev -p 3006",
     "build": "next build",
-    "deploy": "rm -rf node_modules/.cache && rimraf out && next build && next export && touch out / .nojekyll && touch out / CNAME && echo /'weverton.me'/ >> out/CNAME && gh-pages -d out",
+    "deploy": "rm -rf node_modules/.cache && rimraf out && next build && next export && touch out/.nojekyll && touch out/CNAME && echo /'weverton.me'/ >> out/CNAME && gh-pages -d out",
     "start": "next start",
     "lint": "next lint",
     "test": "jest"
