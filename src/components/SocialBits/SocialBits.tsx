@@ -1,5 +1,5 @@
 import React from "react";
-import "./SocialBits.less";
+require("./SocialBits.less");
 
 import {
   GithubIcon,

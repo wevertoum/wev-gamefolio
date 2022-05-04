@@ -1,9 +1,11 @@
 import React from "react";
 import ReactTypingEffect from "react-typing-effect";
-import "./TypingTexts.less";
+require("./TypingTexts.less");
 
 interface Props {}
 const TypingTexts: React.FC<Props> = () => {
+  const title = "I'm Weverton";
+  const description = "I'm a developer with knowledge in";
   return (
     <div className="main-about">
       <h1>
@@ -12,13 +14,13 @@ const TypingTexts: React.FC<Props> = () => {
           👋
         </span>
         <br />
-        I'm Weverton
+        {title}
       </h1>
       <h3>
         <span role="img" aria-label="sheep">
           💻
         </span>{" "}
-        I'm a developer with knowledge in
+        {description}
       </h3>
       <h3>
         <ReactTypingEffect

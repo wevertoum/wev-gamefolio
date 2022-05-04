@@ -1,10 +1,10 @@
 import React from "react";
-import "./FormContact.less";
+require("./FormContact.less");
 
 import { Form, Input } from "antd";
 import { FormInstance } from "antd/lib/form";
 import { MaskedInput } from "antd-mask-input";
-import emailPattern from "../../utils/emailPattern";
+import emailPattern from "utils/emailPattern";
 
 interface Props {
   form: FormInstance;
