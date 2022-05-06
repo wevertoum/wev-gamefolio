@@ -1,14 +1,13 @@
 const withAntdLess = require("next-plugin-antd-less");
 
-const debug = process.env.NODE_ENV !== "production";
-
 module.exports = withAntdLess({
   exportPathMap: function () {
     return {
       "/": { page: "/" },
     };
   },
-  assetPrefix: !debug ? "/wevertoum.github.io/" : "",
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH,
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH,
   lessVarsFilePath: "./src/styles/variables.less",
   lessVarsFilePathAppendToEndOfContent: true,
   images: {
