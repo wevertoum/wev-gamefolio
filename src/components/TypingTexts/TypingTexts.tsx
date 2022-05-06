@@ -4,7 +4,7 @@ require("./TypingTexts.less");
 
 interface Props {}
 const TypingTexts: React.FC<Props> = () => {
-  const title = "I'm Weverton";
+  const title = "I'm Weverton Rodrigues";
   const description = "I'm a developer with knowledge in";
   return (
     <div className="main-about">
