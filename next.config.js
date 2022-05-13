@@ -12,6 +12,8 @@ module.exports = withAntdLess({
   lessVarsFilePathAppendToEndOfContent: true,
   images: {
     domains: ["firebasestorage.googleapis.com"],
+    loader: "akamai",
+    path: "",
   },
 
   webpack(config) {
