@@ -104,16 +104,16 @@ const Home: React.FC<Props> = () => {
             <div
               className="luna"
               style={{
-                width: 400 - positionY,
-                height: 400 - positionY,
+                width: 400,
+                height: 400,
                 boxShadow: `0 0 0 ${positionX}px ##00f96f`,
                 background: "linear-gradient(#ff00c8, #00f96f)",
                 borderRadius: "50%",
                 transition: "ease all 500ms",
                 position: "absolute",
                 top: 20,
-                left: `${positionX + 10}%`,
-                transform: ` translate(-${positionX + 40}%)`,
+                left: "50%",
+                transform: ` translateX(-50%)`,
               }}
             ></div>
             <div
