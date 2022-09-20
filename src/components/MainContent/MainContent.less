@@ -12,34 +12,40 @@
     justify-content: space-between;
     align-items: center;
 
-    .awesome-intro {
-      text-align: center;
-      font-size: 60px;
-      text-shadow: 10px 10px @primary-color;
-      :hover {
-        margin-left: 5px;
-        text-shadow: 5px 5px @secondary-color;
-        cursor: pointer;
-      }
+    .content-play {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .awesome-intro {
+        text-align: center;
+        font-size: 60px;
+        text-shadow: 10px 10px @primary-color;
 
-      @media screen and (max-width: 800px) {
-        font-size: 40px;
-      }
-      @media screen and (max-width: 640px) {
-        font-size: 35px;
-        text-shadow: 5px 5px @primary-color;
-      }
-      @media screen and (max-width: 600px) {
-        font-size: 30px;
-      }
-      @media screen and (max-width: 500px) {
-        font-size: 25px;
-      }
-      @media screen and (max-width: 380px) {
-        font-size: 20px;
-      }
-      @media screen and (max-width: 310px) {
-        font-size: 15px;
+        :hover {
+          margin-left: 5px;
+          text-shadow: 5px 5px @secondary-color;
+          cursor: pointer;
+        }
+
+        @media screen and (max-width: 800px) {
+          font-size: 40px;
+        }
+        @media screen and (max-width: 640px) {
+          font-size: 35px;
+          text-shadow: 5px 5px @primary-color;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 30px;
+        }
+        @media screen and (max-width: 500px) {
+          font-size: 25px;
+        }
+        @media screen and (max-width: 380px) {
+          font-size: 20px;
+        }
+        @media screen and (max-width: 310px) {
+          font-size: 15px;
+        }
       }
     }
 

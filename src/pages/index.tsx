@@ -5,13 +5,19 @@ import { Howl } from "howler";
 import Head from "next/head";
 import MainContent from "components/MainContent";
 import { Button } from "antd";
-import Image from "next/image";
 import {
   ArrowLeftOutlined,
   ArrowRightOutlined,
   ArrowUpOutlined,
   ArrowDownOutlined,
+  PauseCircleOutlined,
+  PlayCircleOutlined,
+  CloseOutlined,
+  MessageOutlined,
 } from "@ant-design/icons";
+import Image from "next/image";
+import { audioUrl } from "utils/constants";
+import ModalContact from "components/ModalContact";
 
 interface Movement {
   direction: "right" | "left" | "top" | "bottom";
@@ -24,6 +30,7 @@ const Home: React.FC<Props> = () => {
   const [playingGame, setPlayingGame] = useState(false);
   const [positionX, setPositionX] = useState(50);
   const [positionY, setPositionY] = useState(50);
+  const [modal, setModal] = useState(false);
   const [moving, setMoving] = useState<Movement>({
     direction: "top",
     moving: false,
@@ -32,10 +39,11 @@ const Home: React.FC<Props> = () => {
   const audio = useMemo(
     () =>
       new Howl({
-        src: "https://firebasestorage.googleapis.com/v0/b/xis-foto.appspot.com/o/pessoal-wev%2FALISON_SpaceEcho.mp3?alt=media&token=69830414-f3c9-4451-a5cd-b9a837639701",
+        src: audioUrl,
         onplay: () => setPlayingMusic(true),
         onpause: () => setPlayingMusic(false),
         loop: true,
+        volume: 0.2,
       }),
     []
   );
@@ -91,31 +99,57 @@ const Home: React.FC<Props> = () => {
   return (
     <>
       <Head>
-        <title>Weverton developer</title>
+        <title>Weverton Developer 🧑🏾‍💻</title>
         <meta name="Weverton rodrigues software developer" content="About me" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="main-content">
+        <Button
+          style={{
+            position: "absolute",
+            top: 8,
+            left: 8,
+          }}
+          type="primary"
+          icon={<MessageOutlined />}
+          onClick={() => setModal(true)}
+        >
+          Message
+        </Button>
+        <div className={`luna ${playingGame ? "show" : ""}`}></div>
+
         {playingGame ? (
           <>
-            {" "}
-            <div>X: {positionX}</div>
-            <div>Y: {positionY}</div>
-            <div
-              className="luna"
-              style={{
-                width: 400,
-                height: 400,
-                boxShadow: `0 0 0 ${positionX}px ##00f96f`,
-                background: "linear-gradient(#ff00c8, #00f96f)",
-                borderRadius: "50%",
-                transition: "ease all 500ms",
-                position: "absolute",
-                top: 20,
-                left: "50%",
-                transform: ` translateX(-50%)`,
-              }}
-            ></div>
+            <div className="controls-ingame">
+              <div className="music-control">
+                <Button
+                  type="link"
+                  onClick={() => {
+                    if (!playingMusic) {
+                      audio.play();
+                    } else {
+                      audio.pause();
+                    }
+                  }}
+                  icon={
+                    playingMusic ? (
+                      <PauseCircleOutlined style={{ fontSize: 24 }} />
+                    ) : (
+                      <PlayCircleOutlined style={{ fontSize: 24 }} />
+                    )
+                  }
+                />
+                <Image alt="music" src="/note.svg" width={20} height={20} />
+              </div>
+              <Button
+                type="link"
+                onClick={() => {
+                  setPlayingGame(false);
+                  audio.volume(0.2);
+                }}
+                icon={<CloseOutlined />}
+              />
+            </div>
             <div
               className="game-content"
               style={{
@@ -138,6 +172,7 @@ const Home: React.FC<Props> = () => {
                 }}
               >
                 <div
+                  className="car-div"
                   style={{
                     height: "fit-content",
                     width: "fit-content",
@@ -150,12 +185,13 @@ const Home: React.FC<Props> = () => {
                     transition: "all 0.1s ease-in-out",
                   }}
                 >
-                  <Image
+                  <img
+                    style={{
+                      objectFit: "contain",
+                    }}
                     src={`/assets/car_${carImage}.png`}
-                    width={100}
-                    objectFit="contain"
-                    // quanto menor o positionY, menor a altura
-                    height={positionY + 10}
+                    width={200}
+                    height={positionY + 20}
                     alt="car"
                   />
                 </div>
@@ -244,7 +280,10 @@ const Home: React.FC<Props> = () => {
         ) : (
           <MainContent
             audio={audio}
-            setPlayingGame={setPlayingGame}
+            setPlayingGame={(value) => {
+              setPlayingGame(value);
+              audio.volume(0.5);
+            }}
             playingMusic={playingMusic}
           />
         )}
@@ -257,7 +296,7 @@ const Home: React.FC<Props> = () => {
           />
         </div>
       </div>
-      {/* <ModalContact onClose={(value) => setModal(value)} modal={modal} /> */}
+      <ModalContact onClose={(value) => setModal(value)} modal={modal} />
     </>
   );
 };

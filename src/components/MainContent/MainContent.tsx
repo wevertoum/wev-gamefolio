@@ -4,6 +4,7 @@ import SocialBits from "components/SocialBits";
 import TypingTexts from "components/TypingTexts";
 import { Howl } from "howler";
 import React from "react";
+import Image from "next/image";
 require("./MainContent.less");
 
 interface Props {
@@ -19,8 +20,19 @@ const MainContent: React.FC<Props> = ({
   return (
     <div className="body">
       <div className="body-content">
-        <div className="awesome-intro" onClick={() => setPlayingGame(true)}>
-          <h1>PLAY</h1>
+        <div className="content-play">
+          <div className="awesome-intro" onClick={() => setPlayingGame(true)}>
+            <h1>PLAY</h1>{" "}
+          </div>
+          <div>
+            <Image
+              alt="play"
+              height={50}
+              width={100}
+              className="gameimage"
+              src={"/assets/car_left.png"}
+            />
+          </div>
         </div>
         <TypingTexts />
         <div className="about-socials">

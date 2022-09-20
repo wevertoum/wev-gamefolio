@@ -14,6 +14,41 @@
     #0000ff
   );
 
+  .controls-ingame {
+    display: flex;
+    background-color: #fff;
+    padding: 4px;
+    width: fit-content;
+    border-radius: 8px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    .music-control {
+      padding: 0 8px;
+      display: flex;
+      background-color: #cecece9d;
+      border-radius: 8px;
+    }
+  }
+
+  .luna {
+    opacity: 0;
+    top: -100%;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(#ff00c8, #00f96f);
+    border-radius: 50%;
+    transition: ease all 500ms;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: all 2s ease-in-out infinite;
+    &.show {
+      opacity: 1;
+      top: 20px;
+    }
+  }
+
   .main-graph {
     position: absolute;
     overflow: hidden;
