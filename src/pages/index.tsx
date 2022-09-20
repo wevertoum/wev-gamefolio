@@ -113,9 +113,8 @@ const Home: React.FC<Props> = () => {
           type="primary"
           icon={<MessageOutlined />}
           onClick={() => setModal(true)}
-        >
-          Message
-        </Button>
+        />
+         
         <div className={`luna ${playingGame ? "show" : ""}`}></div>
 
         {playingGame ? (
