@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 require("./Home.less");
 

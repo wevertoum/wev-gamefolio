@@ -1,0 +1,22 @@
+.messages {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 0 32px;
+  height: 540px;
+  overflow-y: auto;
+  .message {
+    margin: 10px 0;
+    width: 50%;
+    background-color: #ffffff;
+    padding: 10px;
+    &.user {
+      align-self: flex-end;
+      border-radius: 10px 0 10px 10px;
+    }
+    &.bot {
+      align-self: flex-start;
+      border-radius: 0 10px 10px 10px;
+    }
+  }
+}
