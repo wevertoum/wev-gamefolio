@@ -30,9 +30,13 @@ const TypingTexts: React.FC<Props> = () => {
           typingDelay={500}
           text={[
             "Next JS",
+            "React Native",
+            "LeaderShip",
             "React JS",
             "Rest API",
-            "React Native",
+            "SQLite",
+            "Node JS",
+            "TypeORM",
             "Architecture",
             "Typescript",
             "UX / UI design",

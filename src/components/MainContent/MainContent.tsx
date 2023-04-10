@@ -8,20 +8,16 @@ import Image from "next/image";
 require("./MainContent.less");
 
 interface Props {
-  setPlayingGame: React.Dispatch<React.SetStateAction<boolean>>;
+  onPlay: () => void;
   playingMusic: boolean;
   audio: Howl;
 }
-const MainContent: React.FC<Props> = ({
-  setPlayingGame,
-  playingMusic,
-  audio,
-}) => {
+const MainContent: React.FC<Props> = ({ onPlay, playingMusic, audio }) => {
   return (
     <div className="body">
       <div className="body-content">
         <div className="content-play">
-          <div className="awesome-intro" onClick={() => setPlayingGame(true)}>
+          <div className="awesome-intro" onClick={() => onPlay()}>
             <h1>PLAY</h1>{" "}
           </div>
           <div>
