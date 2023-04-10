@@ -33,7 +33,7 @@ const Home: React.FC<Props> = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="main-content">
-        <div className={`luna show`}></div>
+        <div className="luna show"></div>
 
         <MainContent
           audio={audio}
@@ -43,8 +43,8 @@ const Home: React.FC<Props> = () => {
           playingMusic={playingMusic}
         />
 
-        <div className={`main-graph`}>
-          <div className={`graph animation`} />
+        <div className="main-graph">
+          <div className="graph" />
         </div>
       </div>
       <ModalContact onClose={(value) => setModal(value)} modal={modal} />
