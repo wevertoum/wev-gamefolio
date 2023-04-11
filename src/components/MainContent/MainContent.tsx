@@ -3,8 +3,8 @@ import { Button } from "antd";
 import SocialBits from "components/SocialBits";
 import TypingTexts from "components/TypingTexts";
 import { Howl } from "howler";
+import { useRouter } from "next/dist/client/router";
 import React from "react";
-import Image from "next/image";
 require("./MainContent.less");
 
 interface Props {
@@ -13,21 +13,21 @@ interface Props {
   audio: Howl;
 }
 const MainContent: React.FC<Props> = ({ onPlay, playingMusic, audio }) => {
+  const router = useRouter();
   return (
     <div className="body">
       <div className="body-content">
         <div className="content-play">
           <div className="awesome-intro" onClick={() => onPlay()}>
-            <h1>PLAY</h1>{" "}
+            <h1>CONTACT</h1>{" "}
           </div>
-          <div>
-            <Image
-              alt="play"
-              height={50}
-              width={100}
-              className="gameimage"
-              src={"/assets/car_left.png"}
-            />
+          <div
+            className="my-projects-button"
+            onClick={() => {
+              router.push("/projects");
+            }}
+          >
+            some projects by me
           </div>
         </div>
         <TypingTexts />

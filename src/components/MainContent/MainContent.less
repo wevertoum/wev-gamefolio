@@ -18,8 +18,8 @@
       flex-direction: column;
       .awesome-intro {
         text-align: center;
-        font-size: 60px;
-        text-shadow: 10px 10px @primary-color;
+        font-size: 40px;
+        text-shadow: 6px 6px @primary-color;
 
         :hover {
           margin-left: 5px;
@@ -28,23 +28,69 @@
         }
 
         @media screen and (max-width: 800px) {
-          font-size: 40px;
+          font-size: 30px;
         }
         @media screen and (max-width: 640px) {
-          font-size: 35px;
+          font-size: 28px;
           text-shadow: 5px 5px @primary-color;
         }
         @media screen and (max-width: 600px) {
-          font-size: 30px;
-        }
-        @media screen and (max-width: 500px) {
           font-size: 25px;
         }
         @media screen and (max-width: 380px) {
           font-size: 20px;
         }
         @media screen and (max-width: 310px) {
-          font-size: 15px;
+          font-size: 18px;
+        }
+      }
+
+      .my-projects-button {
+        margin-top: 50px;
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        color: #fff;
+        cursor: pointer;
+        text-shadow: 2px 2px @primary-color;
+        background-image: linear-gradient(
+          to right,
+          @primary-color,
+          @secondary-color
+        );
+        background-size: 200% 100%;
+        background-position: 0 0;
+        transition: all 0.8s ease-in-out;
+        animation: anim-background-my-projects-button 5s ease-in-out infinite;
+        &:hover {
+          scale: 1.06;
+        }
+        @media screen and (max-width: 800px) {
+          font-size: 18px;
+        }
+        @media screen and (max-width: 640px) {
+          font-size: 16px;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 14px;
+        }
+        @media screen and (max-width: 380px) {
+          font-size: 12px;
+        }
+        @media screen and (max-width: 310px) {
+          font-size: 10px;
+        }
+      }
+
+      @keyframes anim-background-my-projects-button {
+        0% {
+          background-position: 0 0;
+        }
+        50% {
+          background-position: 100% 0;
+        }
+        100% {
+          background-position: 0 0;
         }
       }
     }

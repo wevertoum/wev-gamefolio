@@ -1,54 +1,38 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useMemo, useState } from "react";
+import React, { useContext, useState } from "react";
 require("./Home.less");
 
-import { Howl } from "howler";
-import Head from "next/head";
 import MainContent from "components/MainContent";
-import { audioUrl } from "utils/constants";
 import ModalContact from "components/ModalContact";
+import PageContainer from "components/PageContainer";
+import MusicContext from "contexts/MusicContext";
 
 interface Props {}
 const Home: React.FC<Props> = () => {
-  const [playingMusic, setPlayingMusic] = useState(false);
+  const { playingMusic, audio } = useContext(MusicContext);
   const [modal, setModal] = useState(false);
 
-  const audio = useMemo(
-    () =>
-      new Howl({
-        src: audioUrl,
-        onplay: () => setPlayingMusic(true),
-        onpause: () => setPlayingMusic(false),
-        loop: true,
-        volume: 0.2,
-      }),
-    []
-  );
-
   return (
-    <>
-      <Head>
-        <title>Weverton Developer 🧑🏾‍💻</title>
-        <meta name="Weverton rodrigues software developer" content="About me" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="main-content">
-        <div className={`luna show`}></div>
-
-        <MainContent
-          audio={audio}
-          onPlay={() => {
-            setModal(true);
-          }}
-          playingMusic={playingMusic}
-        />
-
-        <div className={`main-graph`}>
-          <div className={`graph animation`} />
-        </div>
+    <PageContainer
+      pageTitle="Weverton Developer 🧑🏾‍💻"
+      metadata={{
+        name: "i'm a software developer called Weverton Rodrigues",
+        content: "This is my personal website",
+      }}
+    >
+      <div className="luna show" />
+      <MainContent
+        audio={audio}
+        onPlay={() => {
+          setModal(true);
+        }}
+        playingMusic={playingMusic}
+      />
+      <div className="main-graph">
+        <div className="graph" />
       </div>
       <ModalContact onClose={(value) => setModal(value)} modal={modal} />
-    </>
+    </PageContainer>
   );
 };
 
