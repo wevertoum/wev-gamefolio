@@ -5,12 +5,15 @@ import React from "react";
 import ptBR from "antd/lib/locale/pt_BR";
 import { ConfigProvider } from "antd";
 import "moment/locale/pt-br";
+import { MusicContextProvider } from "contexts/MusicContext";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ConfigProvider locale={ptBR}>
-      {/* @ts-ignore */}
-      <Component {...pageProps} />
+      <MusicContextProvider>
+        {/* @ts-ignore */}
+        <Component {...pageProps} />
+      </MusicContextProvider>
     </ConfigProvider>
   );
 }

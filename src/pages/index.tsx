@@ -1,29 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useMemo, useState } from "react";
+import React, { useContext, useState } from "react";
 require("./Home.less");
 
-import { Howl } from "howler";
 import MainContent from "components/MainContent";
-import { audioUrl } from "utils/constants";
 import ModalContact from "components/ModalContact";
 import PageContainer from "components/PageContainer";
+import MusicContext from "contexts/MusicContext";
 
 interface Props {}
 const Home: React.FC<Props> = () => {
-  const [playingMusic, setPlayingMusic] = useState(false);
+  const { playingMusic, audio } = useContext(MusicContext);
   const [modal, setModal] = useState(false);
-
-  const audio = useMemo(
-    () =>
-      new Howl({
-        src: audioUrl,
-        onplay: () => setPlayingMusic(true),
-        onpause: () => setPlayingMusic(false),
-        loop: true,
-        volume: 0.2,
-      }),
-    []
-  );
 
   return (
     <PageContainer
