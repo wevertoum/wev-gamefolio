@@ -22,10 +22,10 @@ export const portfolioItems = [
     link: "https://github.com/wevertoum/wevertoum.github.io",
   },
   {
-    label: "Weeding List",
+    label: "Wedding List",
     description:
       "I developed a wedding gift list management system. The system fetches data from a Firebase collection and allows guests to mark off items they want to gift. It also features a messaging feed where guests can leave personalized messages with their gifts.",
-    image: "/assets/weeding.png",
+    image: "/assets/wedding.png",
     stack: ["Next JS", "Typescript", "Firebase", "Real Time Database"],
     link: "https://github.com/wevertoum/lista-casamento",
   },
