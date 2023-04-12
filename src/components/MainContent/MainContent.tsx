@@ -17,7 +17,7 @@ const MainContent: React.FC<Props> = ({ onPlay, playingMusic, audio }) => {
   return (
     <div className="body">
       <div className="body-content">
-        <div className="content-play">
+        <div className="content-contact">
           <div className="awesome-intro" onClick={() => onPlay()}>
             <h1>CONTACT</h1>{" "}
           </div>
@@ -30,7 +30,9 @@ const MainContent: React.FC<Props> = ({ onPlay, playingMusic, audio }) => {
             some projects by me
           </div>
         </div>
-        <TypingTexts />
+        <div className="typing">
+          <TypingTexts />
+        </div>
         <div className="about-socials">
           <SocialBits />
         </div>
