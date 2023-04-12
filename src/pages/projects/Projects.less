@@ -69,9 +69,19 @@
         #ffffff48 75%,
         #ffffff48
       );
-      background-size: 10px 10px; /* ajuste o tamanho do espaçamento entre as linhas aqui */
-      background-position: 0 0, 5px 5px;
+      background-size: 16px 16px;
+      background-position: 10px 10px;
       padding: 16px;
+      animation: slide 3s linear infinite;
+
+      @keyframes slide {
+        0% {
+          background-position: 16px 0px;
+        }
+        100% {
+          background-position: 16px -130px;
+        }
+      }
 
       h2 {
         font-size: 1.5rem;

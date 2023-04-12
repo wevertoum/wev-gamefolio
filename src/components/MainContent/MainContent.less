@@ -49,7 +49,7 @@
         margin-top: 50px;
         font-size: 20px;
         padding: 10px 20px;
-        border-radius: 10px;
+        box-shadow: 3px 3px @primary-color;
         color: #fff;
         cursor: pointer;
         text-shadow: 2px 2px @primary-color;
@@ -60,10 +60,11 @@
         );
         background-size: 200% 100%;
         background-position: 0 0;
-        transition: all 0.8s ease-in-out;
+        transition: all 0.3s ease-in-out;
         animation: anim-background-my-projects-button 5s ease-in-out infinite;
         &:hover {
-          scale: 1.06;
+          scale: 1.03;
+          box-shadow: 5px 5px #000;
         }
         @media screen and (max-width: 800px) {
           font-size: 18px;

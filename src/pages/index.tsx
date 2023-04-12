@@ -20,7 +20,6 @@ const Home: React.FC<Props> = () => {
         content: "This is my personal website",
       }}
     >
-      <div className="luna show" />
       <MainContent
         audio={audio}
         onPlay={() => {
