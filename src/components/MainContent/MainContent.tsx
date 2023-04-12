@@ -3,6 +3,7 @@ import { Button } from "antd";
 import SocialBits from "components/SocialBits";
 import TypingTexts from "components/TypingTexts";
 import { Howl } from "howler";
+import ClickIcon from "icons/ClickIcon";
 import { useRouter } from "next/dist/client/router";
 import React from "react";
 require("./MainContent.less");
@@ -20,6 +21,9 @@ const MainContent: React.FC<Props> = ({ onPlay, playingMusic, audio }) => {
         <div className="content-contact">
           <div className="awesome-intro" onClick={() => onPlay()}>
             <h1>CONTACT</h1>{" "}
+            <div className="click-icon">
+              <ClickIcon />
+            </div>
           </div>
           <div
             className="my-projects-button"
