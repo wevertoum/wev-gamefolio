@@ -1,8 +1,8 @@
-export const portfolioItems = [
+export const portfolioItemsEN = [
   {
     label: "Dutch Blitz Game",
     description:
-      "I developed an online version of the popular card game Dutch Blitz that allows players to quickly and easily join and start games with friends. The game features real-time updates and multiplayer functionality, thanks to Firebase integration.",
+      "I created a dynamic online version of the beloved card game Dutch Blitz, designed to offer a seamless and engaging multiplayer experience. This platform enables players to effortlessly join and initiate games with friends, ensuring real-time updates and smooth gameplay. Leveraging Firebase integration, the system supports robust multiplayer functionality, delivering a responsive and interactive environment for users",
     image: "/assets/dutch-blitz.png",
     stack: [
       "React JS",
@@ -12,6 +12,21 @@ export const portfolioItems = [
       "Tailwind",
     ],
     link: "https://blitz-online.vercel.app/",
+  },
+  {
+    label: "Camp Management",
+    description:
+      "This project is a management system for camp accommodations. Campers can select a spot in a room, and administrators can access a secure area to view reports and make changes, such as moving campers between rooms or removing them from the list. The system ensures efficient handling of accommodations and provides a seamless experience for both campers and administrators.",
+    image: "/assets/camp_management.png",
+    stack: [
+      "Next.js",
+      "Typescript",
+      "Firebase",
+      "Tailwind CSS",
+      "React Hook Form",
+      "shadcn/ui",
+    ],
+    link: "https://mapa-sinodal.vercel.app/campings/2wNd2dK3gt7KIFR5uM1E", // Replace with the actual link
   },
   {
     label: "Portfolio",

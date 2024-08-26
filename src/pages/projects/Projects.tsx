@@ -2,7 +2,7 @@ import { Button, Tabs, Tag } from "antd";
 import PageContainer from "components/PageContainer";
 import React, { useContext, useState } from "react";
 import Image from "next/image";
-import { portfolioItems } from "utils/portfolioItems";
+import { portfolioItemsEN } from "utils/portfolioItemsEN";
 import { useRouter } from "next/dist/client/router";
 import {
   LinkOutlined,
@@ -75,7 +75,7 @@ const Projects: React.FC<Props> = () => {
             setSelected(Number(key));
           }}
         >
-          {portfolioItems.map((item, index) => (
+          {portfolioItemsEN.map((item, index) => (
             <Tabs.TabPane
               tab={
                 <div
