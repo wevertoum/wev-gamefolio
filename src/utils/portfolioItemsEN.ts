@@ -16,7 +16,7 @@ export const portfolioItemsEN = [
   {
     label: "Camp Management",
     description:
-      "This project is a management system for camp accommodations. Campers can select a spot in a room, and administrators can access a secure area to view reports and make changes, such as moving campers between rooms or removing them from the list. The system ensures efficient handling of accommodations and provides a seamless experience for both campers and administrators.",
+      "This project is a management system for camp accommodations. Campers can select a spot in a room, and administrators can access a secure area to view the campers list and make changes. The system ensures efficient handling of accommodations and provides a seamless experience for both campers and administrators.",
     image: "/assets/camp_management.png",
     stack: [
       "Next.js",
@@ -44,13 +44,6 @@ export const portfolioItemsEN = [
     stack: ["Next JS", "Typescript", "Firebase", "Real Time Database"],
     link: "https://github.com/wevertoum/lista-casamento",
   },
-  // {
-  //   label: "Chatbot",
-  //   description:
-  //     "Front-end of a chatbot management system for WhatsApp and web with user management, message handling, flow management, and integrations with external APIs.",
-  //   image: "/assets/chatbot.png",
-  //   stack: ["React JS", "Ant Design", "Typescript"],
-  // },
   {
     label: "Pathfinder",
     description:
